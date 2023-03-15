@@ -11,8 +11,8 @@ function getRandomHexColor() {
 buttonStop.setAttribute('disabled', '');
 
 buttonStart.addEventListener('click', element => {
-  element.target.setAttribute('disabled', true);   //доки зміна теми запущена, кнопка «Start» неактивна (disabled).
-  buttonStop.removeAttribute('disabled');
+  element.target.setAttribute('disabled', true);   
+  buttonStop.removeAttribute('disabled');      //доки зміна теми запущена, кнопка «Stop» неактивна (disabled).
 
   intervalId = setInterval(() => {
     bodyChangeColor.style.backgroundColor = getRandomHexColor();
