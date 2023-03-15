@@ -19,10 +19,23 @@ img {
 
 
 button {
-  border-radius: 13px;
+  border-radius: 100%;
   background-color: palegoldenrod;
-  margin: 10px;
-  padding: 10px;
   border-color: green;
-  border: 3px solid;
+  border: 2px solid;
+}
+
+.middleofnowhere {
+  display: flex;	
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
+  position: relative;
+  top: -50%;
+  
+  
+  
 }
