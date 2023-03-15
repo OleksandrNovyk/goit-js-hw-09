@@ -16,12 +16,17 @@ buttonStart.addEventListener('click', element => {
 
   intervalId = setInterval(() => {
     bodyChangeColor.style.backgroundColor = getRandomHexColor();
+    buttonStart.style.backgroundColor = getRandomHexColor();  // фіча
+    buttonStop.style.backgroundColor = getRandomHexColor();   // фіча
   }, 1000);
+  
 });
 
 buttonStop.addEventListener('click', element => {
   element.target.setAttribute('disabled', true);
   buttonStart.removeAttribute('disabled');
+//   buttonStop.style.backgroundColor = getRandomHexColor();
+
 
   clearInterval(intervalId);
 });

@@ -19,9 +19,9 @@ img {
 
 
 button {
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: palegoldenrod;
   margin: 10px;
   padding: 10px;
-  border-color: palegoldenrod;
+  border-color: green;
 }
