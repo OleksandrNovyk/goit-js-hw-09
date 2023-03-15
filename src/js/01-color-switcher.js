@@ -5,13 +5,13 @@ const buttonStop = document.querySelector('[data-stop]');
 let intervalId = null;
 
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 buttonStop.setAttribute('disabled', '');
 
 buttonStart.addEventListener('click', element => {
-  element.target.setAttribute('disabled', true);
+  element.target.setAttribute('disabled', true);   //доки зміна теми запущена, кнопка «Start» неактивна (disabled).
   buttonStop.removeAttribute('disabled');
 
   intervalId = setInterval(() => {
@@ -25,3 +25,5 @@ buttonStop.addEventListener('click', element => {
 
   clearInterval(intervalId);
 });
+
+

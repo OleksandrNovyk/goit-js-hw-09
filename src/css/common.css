@@ -16,3 +16,12 @@ img {
   display: block;
   max-width: 100%;
 }
+
+
+button {
+  border-radius: 8px;
+  background-color: palegoldenrod;
+  margin: 10px;
+  padding: 10px;
+  border-color: palegoldenrod;
+}
