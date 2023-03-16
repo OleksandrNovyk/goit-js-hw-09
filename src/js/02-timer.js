@@ -11,7 +11,7 @@ const day = document.querySelector('[data-days]');
 const hour = document.querySelector('[data-hours]');
 const min = document.querySelector('[data-minutes]');
 const sec = document.querySelector('[data-seconds]');
-const spans = document.querySelectorAll('.value');
+const spanValues = document.querySelectorAll('.value');
 const btnReset = document.querySelector('[data-reset]');
 
 
@@ -39,7 +39,7 @@ flatpickr(date, {
 btn.addEventListener('click', onBtnStartClick);
 
 function onBtnStartClick() {
-  spans.forEach(item => item.classList.toggle('end'));
+  spanValues.forEach(item => item.classList.toggle('end'));
   btn.disabled = true;
   date.disabled = true;
   timerId = setInterval(() => {
@@ -53,7 +53,7 @@ function onBtnStartClick() {
     sec.textContent = addLeadingZero(seconds);
 
     if (timeToFinish < 1000) {
-      spans.forEach(item => item.classList.toggle('end'));
+      spanValues.forEach(item => item.classList.toggle('end'));
       clearInterval(timerId);
       date.disabled = false;
     }
