@@ -12,7 +12,7 @@ const hour = document.querySelector('[data-hours]');
 const min = document.querySelector('[data-minutes]');
 const sec = document.querySelector('[data-seconds]');
 const spans = document.querySelectorAll('.value');
-const buttonReset = document.querySelector('[data-reset]');
+const btnReset = document.querySelector('[data-reset]');
 
 
 let timerId = null;
@@ -60,7 +60,7 @@ function onBtnStartClick() {
   }, 1000);
 }
 
-buttonReset.addEventListener('click', () => {    // фіча
+btnReset.addEventListener('click', () => {    // фіча
     location.reload()                             // фіча
   }); 
 
