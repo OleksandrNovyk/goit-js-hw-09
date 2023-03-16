@@ -1,6 +1,8 @@
 const bodyChangeColor = document.querySelector('body');
 const buttonStart = document.querySelector('[data-start]');
 const buttonStop = document.querySelector('[data-stop]');
+const buttonReset = document.querySelector('[data-reset]');
+
 
 let intervalId = null;
 
@@ -19,16 +21,16 @@ buttonStart.addEventListener('click', element => {
     buttonStart.style.backgroundColor = getRandomHexColor();  // фіча
     buttonStop.style.backgroundColor = getRandomHexColor();   // фіча
   }, 1000);
-  
 });
 
 buttonStop.addEventListener('click', element => {
   element.target.setAttribute('disabled', true);
   buttonStart.removeAttribute('disabled');
 //   buttonStop.style.backgroundColor = getRandomHexColor();
-
-
   clearInterval(intervalId);
 });
 
+buttonReset.addEventListener('click', () => {
+  location.reload()
+});
 
