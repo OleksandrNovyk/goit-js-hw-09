@@ -30,7 +30,7 @@ buttonStop.addEventListener('click', element => {
   clearInterval(intervalId);
 });
 
-buttonReset.addEventListener('click', () => {
-  location.reload()
-});
+buttonReset.addEventListener('click', () => {    // фіча
+  location.reload()                             // фіча
+});                                            // фіча
 
