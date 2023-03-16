@@ -3,7 +3,7 @@ import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 require("flatpickr/dist/themes/confetti.css");
 
-document.body.style.backgroundColor = '#ecd5dd';
+document.body.style.backgroundColor = '#eee0ae';
 
 const date = document.querySelector('#datetime-picker');
 const btn = document.querySelector('[data-start]');
