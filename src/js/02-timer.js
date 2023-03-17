@@ -30,7 +30,6 @@ flatpickr(date, {
       btn.disabled = true;
     } else {
       btn.disabled = false;
-
       Notiflix.Notify.success('Lets go?');
     }
   },
@@ -39,7 +38,6 @@ flatpickr(date, {
 btn.addEventListener('click', onBtnStartClick);
 
 function onBtnStartClick() {
-  spanValues.forEach(item => item.classList.toggle('end'));
   btn.disabled = true;
   date.disabled = true;
   timerId = setInterval(() => {
@@ -53,7 +51,6 @@ function onBtnStartClick() {
     sec.textContent = addLeadingZero(seconds);
 
     if (timeToFinish < 1000) {
-      spanValues.forEach(item => item.classList.toggle('end'));
       clearInterval(timerId);
       date.disabled = false;
     }
