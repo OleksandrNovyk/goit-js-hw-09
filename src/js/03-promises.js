@@ -5,13 +5,7 @@ const bodyChangeColor = document.querySelector('body');
 
 
 form.addEventListener('submit', onSubmitForm);
-bodyChangeColor.style.backgroundColor = getRandomHexColor();
-
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
+document.body.style.backgroundColor = '#eee0ae';
 
 function onSubmitForm(event) {
   event.preventDefault();
