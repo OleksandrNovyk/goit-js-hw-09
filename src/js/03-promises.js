@@ -28,7 +28,6 @@ function onSubmitForm(event) {
         });
     }
   }
-
   event.currentTarget.reset();
 }
 
