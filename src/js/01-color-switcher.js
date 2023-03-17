@@ -4,7 +4,7 @@ const buttonStop = document.querySelector('[data-stop]');
 const buttonReset = document.querySelector('[data-reset]');
 
 
-let intervalId = null;
+let timerId = null;
 
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -16,7 +16,7 @@ buttonStart.addEventListener('click', element => {
   element.target.setAttribute('disabled', true);
   buttonStop.removeAttribute('disabled');      //доки зміна теми запущена, кнопка «Stop» неактивна (disabled).
 
-  intervalId = setInterval(() => {
+  timerId = setInterval(() => {
     bodyChangeColor.style.backgroundColor = getRandomHexColor();
     buttonStart.style.backgroundColor = getRandomHexColor();  // фіча
     buttonStop.style.backgroundColor = getRandomHexColor();   // фіча
@@ -27,7 +27,7 @@ buttonStop.addEventListener('click', element => {
   element.target.setAttribute('disabled', true);
   buttonStart.removeAttribute('disabled');
 //   buttonStop.style.backgroundColor = getRandomHexColor();
-  clearInterval(intervalId);
+  clearInterval(timerId);
 });
 
 buttonReset.addEventListener('click', () => {    // фіча
