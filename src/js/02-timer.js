@@ -11,7 +11,6 @@ const day = document.querySelector('[data-days]');
 const hour = document.querySelector('[data-hours]');
 const min = document.querySelector('[data-minutes]');
 const sec = document.querySelector('[data-seconds]');
-const spanValues = document.querySelectorAll('.value');
 const btnReset = document.querySelector('[data-reset]');
 
 
