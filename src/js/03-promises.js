@@ -1,8 +1,17 @@
 import Notiflix from 'notiflix';
 
 const form = document.querySelector('.form');
+const bodyChangeColor = document.querySelector('body');
+
 
 form.addEventListener('submit', onSubmitForm);
+bodyChangeColor.style.backgroundColor = getRandomHexColor();
+
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 
 function onSubmitForm(event) {
   event.preventDefault();

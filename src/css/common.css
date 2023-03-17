@@ -17,7 +17,6 @@ img {
   max-width: 100%;
 }
 
-
 button {
   border-color: green;
 }
@@ -50,7 +49,6 @@ button {
   border: 5px dashed;
   border-radius: 12px;
   background-color: goldenrod;
-
 }
 
 input {
@@ -78,7 +76,6 @@ input {
   border: 3px solid #F6F6f6;
   margin-left: 10px;
   margin-right: 10px;
-
 }
 
 .reloadbutton {
@@ -113,8 +110,6 @@ input {
   font-size: 15px;
   color:burlywood;
 }
-
-
 
 
 
