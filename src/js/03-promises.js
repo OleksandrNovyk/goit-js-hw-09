@@ -8,7 +8,6 @@ document.body.style.backgroundColor = '#eee0ae';
 function onSubmitForm(event) {
   event.preventDefault();
   const { delay, step, amount } = event.currentTarget.elements;
-
   if (delay.value < 0 || step.value < 0 || amount.value < 0) {
     Notiflix.Notify.warning(`❗ Please enter a positive number`);
   } else {
@@ -35,7 +34,6 @@ function onSubmitForm(event) {
 function createPromise(position, delay) {
   return new Promise((res, rej) => {
     const shouldResolve = Math.random() > 0.3;
-
     setTimeout(() => {
       if (shouldResolve) {
         res({ position, delay });
