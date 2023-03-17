@@ -1,8 +1,6 @@
 import Notiflix from 'notiflix';
 
 const form = document.querySelector('.form');
-const bodyChangeColor = document.querySelector('body');
-
 
 form.addEventListener('submit', onSubmitForm);
 document.body.style.backgroundColor = '#eee0ae';
