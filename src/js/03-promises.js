@@ -32,7 +32,7 @@ function onSubmitForm(event) {
   if (delay.value < 0 || step.value < 0 || amount.value < 0) {
     Notiflix.Notify.warning(`❗ Please enter a positive number`);
   } else {
-    for (let i = 0; i < amount.value; i++) {
+    for (let i = 0; i < Number(amount.value); i++) {
       let position = i + 1;
       let promiseDelay = Number(delay.value) + Number(step.value) * i;   //150+100*0=150, 150+100*1= 250, 150+100*2=350, 150+100*3=450, 150+100*4=550, 150+100*5=650 
       console.log(promiseDelay);
