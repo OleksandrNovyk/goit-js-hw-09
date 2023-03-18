@@ -1,9 +1,30 @@
 import Notiflix from 'notiflix';
 
 const form = document.querySelector('.form');
+const options = {
+  position: 'center-bottom',
+  distance: '15px',
+  borderRadius: '15px',
+  timeout: 8000,
+  clickToClose: true,
+  cssAnimationStyle: 'from-right',
+};
 
 form.addEventListener('submit', onSubmitForm);
 document.body.style.backgroundColor = '#eee0ae';
+
+function createPromise(position, delay) {
+  return new Promise((res, rej) => {
+    const shouldResolve = Math.random() > 0.3;
+    setTimeout(() => {
+      if (shouldResolve) {
+        res({ position, delay });
+      } else {
+        rej({ position, delay });
+      }
+    }, delay);
+  });
+}
 
 function onSubmitForm(event) {
   event.preventDefault();
@@ -18,12 +39,12 @@ function onSubmitForm(event) {
       createPromise(position, delays)
         .then(({ position, delay }) => {
           Notiflix.Notify.success(
-            `✅ Fulfilled promise ${position} in ${delay}ms`
+            `✅ Fulfilled promise ${position} in ${delay}ms`, options
           );
         })
         .catch(({ position, delay }) => {
           Notiflix.Notify.failure(
-            `❌ Rejected promise ${position} in ${delay}ms`
+            `❌ Rejected promise ${position} in ${delay}ms`, options
           );
         });
     }
@@ -31,15 +52,3 @@ function onSubmitForm(event) {
   event.currentTarget.reset();
 }
 
-function createPromise(position, delay) {
-  return new Promise((res, rej) => {
-    const shouldResolve = Math.random() > 0.3;
-    setTimeout(() => {
-      if (shouldResolve) {
-        res({ position, delay });
-      } else {
-        rej({ position, delay });
-      }
-    }, delay);
-  });
-}
