@@ -1,5 +1,6 @@
 import Notiflix from 'notiflix';
 
+document.body.style.backgroundColor = '#eee0ae';
 const form = document.querySelector('.form');
 const options = {
   position: 'center-bottom',
@@ -7,20 +8,19 @@ const options = {
   borderRadius: '15px',
   timeout: 8000,
   clickToClose: true,
-  cssAnimationStyle: 'from-right',
+  cssAnimationStyle: 'from-bottom',
 };
 
 form.addEventListener('submit', onSubmitForm);
-document.body.style.backgroundColor = '#eee0ae';
 
 function createPromise(position, delay) {
-  return new Promise((res, rej) => {
+  return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
     setTimeout(() => {
       if (shouldResolve) {
-        res({ position, delay });
+        resolve({ position, delay });
       } else {
-        rej({ position, delay });
+        reject({ position, delay });
       }
     }, delay);
   });

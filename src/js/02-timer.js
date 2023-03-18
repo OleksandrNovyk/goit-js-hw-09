@@ -14,6 +14,7 @@ const sec = document.querySelector('[data-seconds]');
 const btnReset = document.querySelector('[data-reset]');
 
 
+
 let timerId = null;
 
 btn.disabled = true;
